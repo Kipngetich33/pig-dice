@@ -1,10 +1,32 @@
+#top{
+	background-color: #ffffff;
+	display: flex;
+	align-items: center;
+	align-content: center;
+	text-align: center;
 
-button:hover {
-cursor: pointer;
-color: #0088cc;
-text-decoration: underline;
 }
-.background-color {
-	background-color: blue;
+#top h1{
+	color: #000000;
+	font-family: 'Lobster', cursive;
+	fon
+}
+#panel1{
+	width: 500px;
 
+}
+
+#btn-start{
+	 background-color: #4CAF50; 
+    border: none;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
+
+#third-section{
+	background: url("../image/dice-dark.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
 }
