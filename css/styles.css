@@ -1,0 +1,10 @@
+
+button:hover {
+cursor: pointer;
+color: #0088cc;
+text-decoration: underline;
+}
+.background-color {
+	background-color: blue;
+
+}
