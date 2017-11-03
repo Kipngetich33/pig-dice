@@ -6,7 +6,7 @@
 
 #### Pig Dice
 
-#DESCRIPTION
+# DESCRIPTION
 
 #### This is a computer based a dice game 
 
@@ -22,7 +22,7 @@
 
 #### Moringa School, StackOverflow.com and W3 schools.
 
-#SPECIFICATION OF THE GAME
+# SPECIFICATION OF THE GAME
 
 The game uses a constructor named Player constructor.
 
@@ -44,7 +44,7 @@ prototype functions:
 
 
 
-#Technologies Used
+# Technologies Used
 
 #### This project uses major technologies which are :HTML5/css , Bootstrap and Javascript/Jquery
 
@@ -52,7 +52,7 @@ prototype functions:
 
 #### In case You have any issues using this code please do no hesitate to get in touch with me through khalifngeno@gmail.com or leave a commit here on github.
 
-#License
+# License
 
 *MIT License
 
