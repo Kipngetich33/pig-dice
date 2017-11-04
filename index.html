@@ -4,8 +4,8 @@
     <title>Pig Dice!</title>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lobster|Pacifico" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Pacifico" rel="stylesheet"> -->
     <link href="css/styles.css" rel="stylesheet" type="text/css" media="all">
   </head>
   <body>
@@ -37,7 +37,7 @@
             <form class="form-group" id="form-group">
               <input type="text" name="player1" id="player1" placeholder="player1" class="form-control">
               <input type="text" name="player2" id="player2" placeholder="player2" class="form-control">
-              <button class="form-control" id="btn-start">Start New!</button>
+              <button class="btn" id="btn-start">Start New!</button>
             </form>
            </div>
           </div>
@@ -47,18 +47,19 @@
         <div class="row" id="third-section">  
           <div class="card">
             <div class="card-body">
-              <h3> Player 1:</h3>
-              <h5>Roll Score  :</h5>
-              <h5>Turn Score :</h5>
+              <h3 id="player1-append"> Player 1: </h3>
+              <h5 id="rollScore">Roll Score  : <span id="rollScore1-value">0</span></h5>
+              <h5 id="turnScore">Turn Score : <span id="turnScore1-value">0</span></h5>
               <button class="play-buttons" id="play-green">Roll</button>
               <button class="play-buttons" id="play-red">Hold</button>
             </div>
           </div>
           <div class="card">
             <div class="card-body">
-              <h3> Player 2</h3>
-              <h5>Roll Score  :</h5>
-              <h5>Turn Score :</h5>
+              <h3 id="player2-append"> Player 2: </h3>
+              <h5>Roll Score  : <span id="rollScore2-value">0</span></h5>
+              <h3 id="rollScore"></h3>
+              <h5>Turn Score : <span id="turnScore2-value">0</span></h5>
               <button class="play-buttons" id="play-green">Roll</button>
               <button class="play-buttons" id="play-red">Hold</button>
             </div>
