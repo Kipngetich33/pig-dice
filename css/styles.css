@@ -22,7 +22,7 @@ body{
 	color: #000000;
 	font-family: 'Lobster', cursive;
 	font-size: 50px;
-/*}
+}
 #player1{
 	margin: 2px;
 
@@ -30,13 +30,13 @@ body{
 #player2{
 	margin: 2px;
 	
-}*/
+}
 
 
 /*this is the second section of the website (rules and new game)*/
-/*#panel{
+#panel{
 	margin-left: 300px;
-}*/
+}
 #main-panel{
 	border:solid #ffffff ;
 	/*border-radius: 30%;*/
@@ -77,11 +77,10 @@ body{
 }
 
 /*this is the third section of the website*/
-#third-section{
-	/*background: url("../image/dark-theme.jpg");
-*/	/*background-repeat: no-repeat;
+/*#third-section{
+	background-repeat: no-repeat;
 	background-size: cover;
-/*}*/
+}
 .card{
 	margin: 20px;
 	border-radius: 10%;
