@@ -29,6 +29,7 @@
                  <li>If player holds, their turn total is added to their total score</li>
                  <li>The first player to earn 100 points wins</li>
                </ul>
+               <button class="play-buttons" id="show-rules">See Rules!</button>
            </div>
           </div></br>
           <div class="panel panel-default" id="main-panel">
@@ -39,6 +40,8 @@
               <input type="text" name="player2" id="player2" placeholder="player2" class="form-control">
               <button class="btn" id="btn-start">Start New!</button>
             </form>
+            <button class="play-buttons" id="Restart-players">Restart!</button>
+            <button class="play-buttons" id="Exit-players">Exit</button>
            </div>
           </div>
         </div>
@@ -47,7 +50,7 @@
         <div class="row" id="third-section">  
           <div class="card">
             <div class="card-body">
-              <h3 id="player1-append"> Player 1: </h3>
+              <h3 > Player 1:<span id="player1-append">Name</span> </h3>
               <h5 id="rollScore">Roll Score  : <span id="rollScore1-value">0</span></h5>
               <h5 id="turnScore">Turn Score : <span id="turnScore1-value">0</span></h5>
               <button class="play-buttons" id="play-green">Roll</button>
@@ -55,18 +58,60 @@
             </div>
           </div>
           <div class="card">
+              <div class="card-body">
+                <h3 id="dice-card-title">Rolled Dice</h3>
+                <div id="rolled-dice-body">
+                    <div class="card" id="circle-cards-first">
+                      <div class="cardbody" >
+                      </div>
+                    </div>
+                      <div class="card" id="circle-cards-first-hidden">
+                        <div class="cardbody" >
+                        </div>
+                      </div>
+                      <div class="card" id="circle-cards-first">
+                        <div class="cardbody" >
+                        </div>
+                      </div>
+                      <br/>
+                      <div class="card" id="circle-cards-second">
+                        <div class="cardbody" >
+                        </div>
+                      </div>
+                      <div class="card" id="circle-cards-second">
+                        <div class="cardbody" >
+                        </div>
+                      </div>
+                      <div class="card" id="circle-cards-second">
+                        <div class="cardbody" >
+                        </div>
+                      </div>
+                      <br/>
+                      <div class="card" id="circle-cards-third">
+                        <div class="cardbody" >
+                        </div>
+                      </div>
+                      <div class="card" id="circle-cards-third-hidden">
+                        <div class="cardbody" >
+                        </div>
+                      </div>
+                      <div class="card" id="circle-cards-third">
+                        <div class="cardbody" >
+                        </div>
+                      </div>
+<!-- end of rolled dice body -->
+                </div>
+              </div>
+          </div>
+          <div class="card">
             <div class="card-body">
-              <h3 id="player2-append"> Player 2: </h3>
+              <h3 > Player 2:<span id="player2-append">Name</span></h3>
               <h5>Roll Score  : <span id="rollScore2-value">0</span></h5>
               <h3 id="rollScore"></h3>
               <h5>Turn Score : <span id="turnScore2-value">0</span></h5>
               <button class="play-buttons" id="play-green">Roll</button>
               <button class="play-buttons" id="play-red">Hold</button>
             </div>
-          </div>
-          <div id="game-section">
-            <button class="play-buttons" id="play1-game-green">Restart</button><br/>
-            <button class="play-buttons" id="play1-game-red">Exit</button>
           </div>
         </div>
   	<script src="js/jquery-3.2.1.js"></script>

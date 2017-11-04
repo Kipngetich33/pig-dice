@@ -124,6 +124,24 @@ body{
 	font-size: 25px;
 	background-color: red;
 }
+#Exit-players{
+	display: none;
+	padding-left: 30px;
+	padding-right: 30px;
+	background-color: red;
+}
+#Restart-players{
+	display:none;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin-left: 20%;
+}
+#show-rules{
+	display: none;
+	padding-left: 50px;
+	padding-right: 50px;
+	margin-left: 35%;
+}
 #play1-game-green{
 	margin-top: 70px;
 	margin-left: 20px;
@@ -135,3 +153,59 @@ body{
 	font-size: 25px;
 	background-color: red;
 }
+
+/*this section deals with card manipulation to draw a dice*/
+/*#dice-card-title{
+	text-align: center;
+}
+#rolled-dice-body{
+	margin-left: 30px;
+	margin-top: 20px;
+	border: solid white 2px;
+	border-radius: 5%;
+	padding: 10px;
+	padding-top: 20px;
+	width: 80%;
+}
+#circle-cards-first{
+	border-radius: 100%;
+	width: 20px;
+	height: 20px;
+	margin-left: 20px;
+	margin-top:10px;
+	display: inline-block;
+}
+#circle-cards-first-hidden{
+	border-radius: 100%;
+	width: 20px;
+	height: 20px;
+	margin-left: 20px;
+	margin-top:10px;
+	display: inline-block;
+	background-color: #000000;
+}
+#circle-cards-second{
+	border-radius: 100%;
+	width: 20px;
+	height: 20px;
+	margin-left: 20px;
+	margin-top:20px;
+	display: inline-block;
+}
+#circle-cards-third{
+	border-radius: 100%;
+	width: 20px;
+	height: 20px;
+	margin-left: 20px;
+	margin-top:20px;
+	display: inline-block;
+}
+#circle-cards-third-hidden{
+	border-radius: 100%;
+	width: 20px;
+	height: 20px;
+	margin-left: 20px;
+	margin-top:20px;
+	display: inline-block;
+	background-color: #000000;
+}*/

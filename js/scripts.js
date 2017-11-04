@@ -73,10 +73,20 @@ $(document).ready(function(){
 		var player2=new Players(name2)
 		console.log("ok");
 
-	$("h3#player1-append").append(player1.name)
-	$("h3#player2-append").append(player2.name)
+	$("#player1-append").text(player1.name)
+	$("#player2-append").text(player2.name)
 
-	
+	//hide the top section in order to pull up the player cards
+	$("#top").slideToggle();
+
+	// hide ul with game rules and players form
+	$("ul#rules").hide();
+	$("form#form-group").hide();
+    
+	//show the hidden buttons show-rules, Restart-players ,Exit-players
+	$("button#show-rules").show();
+	$("button#Restart-players").show();
+	$("button#Exit-players").show();
 	console.log("ok");
 	});
 
@@ -101,6 +111,17 @@ $(document).ready(function(){
     $("#play1-game-red").click(function(event){
     	event.preventDefault();
     	window.close();
+    });
 
+    //buttons to unhide the rules, top row and the form
+    $("button#show-rules").click(function(event){
+    	event.preventDefault();
+    	$("ul#rules").slideToggle();
+
+    });
+    $("button#Restart-players").click(function(event){
+	event.preventDefault();
+	$("form#form-group").slideToggle();
+	$("#top").slideToggle();
     });
 });
