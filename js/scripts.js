@@ -1,18 +1,27 @@
+//Business Logic
+function Player(name,turnTotal,totalScore){
+	this.name=name;
+	this.turnTotal=turnTotal;
+	this.totalScore=totalScore;
+}
 
-jQuery(document).ready(function() {  
-  jQuery("#subscribe-btn").click(function() {
+var turnTotal=0;
 
-  	var email= $("#email").val();
-    alert(email+" "+"has been successfully added to our list of subscribers.Thank you!");
-    });
-	$("#show-hide").click(function(event){
-		event.preventDefault();
-		// $(".showing").fadeIn();
-		// $(".showing").fadeOut();
-		// $(".showing").fadeToggle();
-		$(".showing").slideToggle();
-		$("body").removeClass();
-		$("body").addClass("background-color");
-	});
-});
-    
+function results(randnum){
+	if (randnum===1){
+		return turnTotal=0;
+         }
+    else if{
+    	return turnTotal+=randnum;
+    }
+}
+
+function winner(){
+	if (turnTotal===100){
+		return "winner"
+	}else{
+		return turnTotal;
+	}
+}
+
+//user Interfac
