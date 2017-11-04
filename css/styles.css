@@ -124,3 +124,14 @@ body{
 	font-size: 25px;
 	background-color: red;
 }
+#play1-game-green{
+	margin-top: 70px;
+	margin-left: 20px;
+	font-size: 25px;
+}
+#play1-game-red{
+	margin-top: 70px;
+	margin-left: 20px;
+	font-size: 25px;
+	background-color: red;
+}

@@ -6,16 +6,49 @@ function Players(name,turnTotal,totalScore){
 }
 
 function randomNumbers (){
-	math.rand();
+	var randnum=Math.floor(Math.random()*6+1);
+	return randnum;
 }
 
-function results(randnum){
+function totalScore(randomNumbers){
 	if (randnum===1){
-		return turnTotal=0;
+		return totalScore =0;
          }
-    else {
-    	return turnTotal+=randnum;
-    }
+    else if (randnum===2){
+		return totalScore +=2;
+         }
+    else if (randnum===3){
+		return totalScore +=3;
+         }
+    else if (randnum===4){
+		return totalScore +=4;
+         }
+    else if (randnum===5){
+		return totalScore +=5;
+         }
+    else{
+		return totalScore +=6;
+         }
+}
+function rollScore(randnum){
+	if (randnum===1){
+		return totalScore =0;
+         }
+    else if (randnum===2){
+		return rollScore=2;
+         }
+    else if (randnum===3){
+		return rollScore=3;
+         }
+    else if (randnum===4){
+		return rollScore=4;
+         }
+    else if (randnum===5){
+		return rollScore=5;
+         }
+    else{
+		return rollScore=6;
+         }
 }
 
 function winner(){
@@ -42,19 +75,32 @@ $(document).ready(function(){
 
 	$("h3#player1-append").append(player1.name)
 	$("h3#player2-append").append(player2.name)
+
+	
 	console.log("ok");
 	});
 
 	$("button#play-green").click(function(event){
 		event.preventDefault();
-		alert (randomNumbers());
+		$("#rollScore1-value").text(turnTotal);
+		// $("#turnScore1-value").text(turnTotal);
 	});
 
 	$("button#play-red").click(function(event){
 		event.preventDefault();
 
-		$("#rollScore2").text(turnTotal);
+		// $("#rollScore2-value").text(totalScore);
+		$("#turnScore1-value").text(totalScore);
 	});
+    
+    $("#play1-game-green").click(function(event){
+    	event.preventDefault();
+    	window.open();
 
+    });
+    $("#play1-game-red").click(function(event){
+    	event.preventDefault();
+    	window.close();
 
+    });
 });
