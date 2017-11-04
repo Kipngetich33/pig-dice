@@ -1,9 +1,7 @@
 body{
-	/*background:url("../image/background.jpg");*/
 	background-repeat: no-repeat;
 }
 #top{
-	/*background-color: #ffffff;*/
 	display: flex;
 	align-items: center;
 	align-content: center;
