@@ -155,7 +155,7 @@ body{
 }
 
 /*this section deals with card manipulation to draw a dice*/
-/*#dice-card-title{
+#dice-card-title{
 	text-align: center;
 }
 #rolled-dice-body{
@@ -208,4 +208,4 @@ body{
 	margin-top:20px;
 	display: inline-block;
 	background-color: #000000;
-}*/
+}
