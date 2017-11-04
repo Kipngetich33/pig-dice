@@ -1,11 +1,9 @@
 //Business Logic
-function Player(name,turnTotal,totalScore){
+function Players(name,turnTotal,totalScore){
 	this.name=name;
 	this.turnTotal=turnTotal;
 	this.totalScore=totalScore;
 }
-
-var turnTotal=0;
 
 function results(randnum){
 	if (randnum===1){
@@ -24,4 +22,18 @@ function winner(){
 	}
 }
 
-//user Interfac
+//user Interface
+$(document).ready(function(){
+	var totalScore=0;
+	var turnTotal=0;
+
+	$("form#form-group").submit(function(event){
+		event.preventDefault();
+		var name=$("player1").val();
+		var player1=new Players(name)
+
+	$("#player1-append").append(player1.name)
+	});
+
+
+});
