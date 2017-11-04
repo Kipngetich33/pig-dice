@@ -1,18 +1,64 @@
+body{
+	/*background:url("../image/background.jpg");*/
+	background-repeat: no-repeat;
+}
 #top{
-	background-color: #ffffff;
+	/*background-color: #ffffff;*/
 	display: flex;
 	align-items: center;
 	align-content: center;
 	text-align: center;
 
 }
+.exclamation{
+	color:red;
+	padding-left: 3px;
+	font-size: 50px;
+}
+.exclamation1{
+	color:#4CAF50; 
+	}
 #top h1{
 	color: #000000;
 	font-family: 'Lobster', cursive;
-	fon
+	font-size: 50px;
+/*}
+#player1{
+	margin: 2px;
+
+}
+#player2{
+	margin: 2px;
+	
+}*/
+
+
+/*this is the second section of the website (rules and new game)*/
+/*#panel{
+	margin-left: 300px;
+}*/
+#main-panel{
+	border:solid #ffffff ;
+	/*border-radius: 30%;*/
+	margin: 10px;
 }
 #panel1{
 	width: 500px;
+	background-color: #000000;
+	color: #ffffff;
+	padding: 8%;
+	border-radius: 5%;
+	border-color: none;
+
+}
+#panel2{
+	width: 450px;
+	padding:10px;
+	background-color: #000000;
+	color: #ffffff;
+	padding: 8%;
+	border-radius: 8%;
+	border-color: none;
 
 }
 
@@ -23,10 +69,61 @@
     text-decoration: none;
     display: inline-block;
     font-size: 20px;
+    font-family: 'Lobster', cursive;
+}
+#rules{
+	font-family: 'Pacifico', cursive;
+	font-size:15px;
 }
 
+/*this is the third section of the website*/
 #third-section{
-	background: url("../image/dice-dark.jpg");
-	background-repeat: no-repeat;
+	/*background: url("../image/dark-theme.jpg");
+*/	/*background-repeat: no-repeat;
 	background-size: cover;
+/*}*/
+.card{
+	margin: 20px;
+	border-radius: 10%;
+	border-color: none;
+	margin-left: 10px;
 }
+.card-body{
+	width: 300px;
+	height: 300px;
+	background-color: #000000;
+	border-radius: 10%;
+	border-color: none;
+	color:#ffffff;
+}
+.play-buttons{
+	background-color: #4CAF50; 
+    border: none;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 12%;
+    font-family: 'Lobster', cursive;
+
+}
+#play-green{
+	margin-top: 20px;
+	margin-left: 20px;
+}
+#play-red{
+	margin-top: 20px;
+	margin-left: 20px;
+	background-color: red;
+}
+#play1-green{
+	margin-top: 70px;
+	margin-left: 20px;
+	font-size: 25px;
+}
+#play1-red{
+	margin-top: 70px;
+	margin-left: 20px;
+	font-size: 25px;
+	background-color: red;
+}*/

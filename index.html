@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Pig Dice</title>
+    <title>Pig Dice!</title>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Pacifico" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet" type="text/css" media="all">
   </head>
   <body>
@@ -13,25 +14,25 @@
        <div class="col-md-1"></div>
        <div class="col-md-3"><img src="image/shadow-dice.jpg"></div>
        <div class="col-md-8">
-         <h1 id="game-title">PIG DICE GAME<h1>
+         <h1 id="game-title"><span class="exclamation">P</span>I<span class="exclamation1">G</span> <span class="exclamation">D</span>IC<span class="exclamation1">E</span> <span class="exclamation">G</span>A<span class="exclamation1">M</span>E<span class="exclamation">!</span><h1>
        </div> 
       </div>
       <hr/>
       <div class="row">
         <div class="row" id="second-section" >
-          <div class="panel panel-default" >
+          <div class="panel panel-default" id="main-panel">
            <div class="panel-body" id="panel1">
                <h3>Rules</h3>
-               <ul id="rules">
-                 <li>If player rolls 1 turn score becomes 0</li>
-                 <li>If player rolls between 2 and 6 the value is added to their turn score</li>
-                 <li>If player holds their turn total is added to their total score</li>
+               <ul id="rules" >
+                 <li>If player rolls 1,the players turn score becomes 0</li>
+                 <li>If player rolls between 2 and 6, the value is added to their turn score</li>
+                 <li>If player holds, their turn total is added to their total score</li>
                  <li>The first player to earn 100 points wins</li>
                </ul>
            </div>
           </div></br>
-          <div class="panel panel-default">
-           <div class="panel-body" id="panel1">
+          <div class="panel panel-default" id="main-panel">
+           <div class="panel-body" id="panel2">
             <h3>New Game</h3>
             <form class="form-group">
               <input type="text" name="player1" id="player1" placeholder="player1" class="form-control">
@@ -42,30 +43,29 @@
           </div>
         </div>
       </div>
-        
         <hr/>
         <div class="row" id="third-section">  
           <div class="card">
             <div class="card-body">
               <h3> Player 1</h3>
-              <h5>Roll Score:</h5>
-              <h5>Turn Score:</h5>
-              <button class="play-buttons">Roll</button>
-              <button class="play-buttons">Hold</button>
+              <h5>Roll Score  :</h5>
+              <h5>Turn Score :</h5>
+              <button class="play-buttons" id="play-green">Roll</button>
+              <button class="play-buttons" id="play-red">Hold</button>
             </div>
           </div>
           <div class="card">
             <div class="card-body">
               <h3> Player 2</h3>
-              <h5>Roll Score:</h5>
-              <h5>Turn Score</h5>
-              <button class="play-buttons">Roll</button>
-              <button class="play-buttons">Hold</button>
+              <h5>Roll Score  :</h5>
+              <h5>Turn Score :</h5>
+              <button class="play-buttons" id="play-green">Roll</button>
+              <button class="play-buttons" id="play-red">Hold</button>
             </div>
           </div>
           <div id="game-section">
-            <button class="play-buttons">Restart</button><br/>
-            <button class="play-buttons">Exit</button>
+            <button class="play-buttons" id="play1-green">Restart</button><br/>
+            <button class="play-buttons" id="play1-red">Exit</button>
           </div>
         </div>
   	<script src="js/jquery-3.2.1.js"></script>
