@@ -1,8 +1,9 @@
 //Business Logic Section
 
 //Create a constructor players
-function Players(turnTotal){
+function Players(turnTotal,totalScoreValue){
 	this.turnTotal=turnTotal;
+	this.totalScoreValue=totalScoreValue;
 }
 
 function randomNumbers (){
@@ -10,28 +11,25 @@ function randomNumbers (){
 	turnTotal= randnum;
 	return turnTotal;
 }
-
-function totalScore(randnum){
-    var totalScore=0;
-    // randnum= randomNumbers();
-
-	if (randnum===1){
-		return totalScore =0;
+totalScore1=0;
+function totalScoreFunction(turnTotal){
+	if (turnTotal===1){
+		return totalScore1 =0;
          }
-    else if (randnum===2){
-		return totalScore +=2;
+    else if (turnTotal===2){
+		return totalScore1 +=2;
          }
-    else if (randnum===3){
-		return totalScore +=3;
+    else if (turnTotal===3){
+		return totalScore1 +=3;
          }
-    else if (randnum===4){
-		return totalScore +=4;
+    else if (turnTotal===4){
+		return totalScore1 +=4;
          }
-    else if (randnum===5){
-		return totalScore +=5;
+    else if (turnTotal===5){
+		return totalScore1 +=5;
          }
     else{
-		return totalScore +=6;
+		return totalScore1 +=6;
          }
 }
 function rollScore(randnum){
@@ -96,10 +94,20 @@ $(document).ready(function(){
 	console.log("ok");
 	});
 
-	$("button#play-green").click(function(event){
+    $("button#play-green-1").click(function(event){
 		event.preventDefault();
-		player1 =new Players(randomNumbers());
+		player1 =new Players(randomNumbers(),totalScoreFunction(randomNumbers()));
 		$("#rollScore1-value").text(player1.turnTotal);
+		$("#turnScore1-value").text(player1.totalScoreValue)
+		console.log(player1.turnTotal);
+		// $("#turnScore1-value").text(turnTotal);
+	});
+
+	$("button#play-green-2").click(function(event){
+		event.preventDefault();
+		player2 =new Players(randomNumbers());
+		$("#rollScore2-value").text(player2.turnTotal);
+		console.log(player2.turnTotal);
 		// $("#turnScore1-value").text(turnTotal);
 	});
 
@@ -107,7 +115,7 @@ $(document).ready(function(){
 		event.preventDefault();
 
 		// $("#rollScore2-value").text(totalScore);
-		$("#turnScore1-value").text(totalScore);
+		// $("#turnScore1-value").text(player1.totalScore);
 	});
     
     $("#play1-game-green").click(function(event){
