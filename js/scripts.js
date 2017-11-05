@@ -1,16 +1,20 @@
-//Business Logic
-function Players(name,turnTotal,totalScore){
-	this.name=name;
+//Business Logic Section
+
+//Create a constructor players
+function Players(turnTotal){
 	this.turnTotal=turnTotal;
-	this.totalScore=totalScore;
 }
 
 function randomNumbers (){
 	var randnum=Math.floor(Math.random()*6+1);
-	return randnum;
+	turnTotal= randnum;
+	return turnTotal;
 }
 
-function totalScore(randomNumbers){
+function totalScore(randnum){
+    var totalScore=0;
+    // randnum= randomNumbers();
+
 	if (randnum===1){
 		return totalScore =0;
          }
@@ -67,23 +71,25 @@ $(document).ready(function(){
 	$("form#form-group").submit(function(event){
 		event.preventDefault();
 		console.log("ok");
-		var name1=$("#player1").val();
-		var name2=$("#player2").val();
-		var player1=new Players(name1)
-		var player2=new Players(name2)
-		console.log("ok");
+//this section collects names of the players from the form
 
-	$("#player1-append").text(player1.name)
-	$("#player2-append").text(player2.name)
+	// 	var name1=$("#player1").val();
+	// 	var name2=$("#player2").val();
+	// 	var player1=new Players(name1)
+	// 	var player2=new Players(name2)
+	// 	console.log("ok");
+
+	// $("#player1-append").text(player1.name)
+	// $("#player2-append").text(player2.name)
 
 	//hide the top section in order to pull up the player cards
-	$("#top").slideToggle();
+	// $("#top").slideToggle();
 
 	// hide ul with game rules and players form
 	$("ul#rules").hide();
 	$("form#form-group").hide();
     
-	//show the hidden buttons show-rules, Restart-players ,Exit-players
+//show the hidden buttons show-rules, Restart-players ,Exit-players
 	$("button#show-rules").show();
 	$("button#Restart-players").show();
 	$("button#Exit-players").show();
@@ -92,7 +98,8 @@ $(document).ready(function(){
 
 	$("button#play-green").click(function(event){
 		event.preventDefault();
-		$("#rollScore1-value").text(turnTotal);
+		player1 =new Players(randomNumbers());
+		$("#rollScore1-value").text(player1.turnTotal);
 		// $("#turnScore1-value").text(turnTotal);
 	});
 

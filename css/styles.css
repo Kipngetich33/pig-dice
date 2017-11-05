@@ -160,11 +160,11 @@ body{
 }
 #rolled-dice-body{
 	margin-left: 30px;
-	margin-top: 20px;
+	margin-top: 10px;
 	border: solid white 2px;
 	border-radius: 5%;
 	padding: 10px;
-	padding-top: 20px;
+	padding-top: 10px;
 	width: 80%;
 }
 #circle-cards-first{
