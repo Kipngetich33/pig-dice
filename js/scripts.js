@@ -21,8 +21,9 @@ Players.prototype.randomNumi = function(){
 
 // this section function will help in calculating the score
 Players.prototype.totalScoreDeterminant=function(){
-	this.totalScore=this.turnTotal + this.totalScore;
-	this.turnScore=0;
+	this.totalScore+=this.turnTotal;
+	return this.totalScore;
+
 }
 
 //User Interface
@@ -30,7 +31,7 @@ Players.prototype.totalScoreDeterminant=function(){
 $(document).ready(function(){
 	var player1;
 	var player2;
-	
+	var subTotal;
 	$("form#nameInput").submit(function(event){
 		event.preventDefault();
 		console.log("hi")	
@@ -64,10 +65,10 @@ $(document).ready(function(){
 	    $("#rollScore1-value").text("ok");
 
 	    // debugger
-		var turnOutput1= player1.randomNumi();
+		//var turnOutput1= player1.randomNumi();
 		// console.log (turnOutput1);
-		$("#rollScore1-value").text(player1.turnTotal);
-		$("#totalScore1-value").text(player1.totalScore);
+		$("#rollScore1-value").text(player1.randomNumi());
+		$("#totalScore1-value").text(player1.totalScoreDeterminant());
 		
 		// if (player1.turnOutput1===1){
 			
@@ -78,6 +79,17 @@ $(document).ready(function(){
 
 
 	});
+
+// This section is for the hold button for player1
+	$("#play-red-1").click(function(event){
+		event.preventDefault();
+        debugger;
+		console.log("button-hold-1");
+		var total3= player1.totalScoreDeterminant();
+		$("#totalScore1-value").text(total3);
+
+	});
+
 
 // This section is for the second player
 
@@ -92,8 +104,9 @@ $(document).ready(function(){
 	    // debugger
 		var turnOutput2= player2.randomNumi();
 		// console.log (turnOutput1);
+		var total3= totalScoreDeterminant();
 		$("#rollScore2-value").text(player2.turnTotal);
-		$("#totalScore2-value").text(player2.totalScore);
+		$("#totalScore2-value").text(total3);
 		
 		// if (player1.turnOutput1===1){
 			
