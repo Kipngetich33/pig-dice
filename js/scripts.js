@@ -6,10 +6,10 @@ function Players(playerName,turnTotal,totalScoreValue){
 	this.turnTotal=turnTotal;
 	this.totalScoreValue=totalScoreValue;
 }
-var randnum=Math.floor(Math.random()*6)+1;
 
 
-Players.prototype.randomNumi= function(){
+Players.prototype.randomNumi = function(){
+	var randnum=Math.floor(Math.random()*6)+1;
 	if (randnum===1){
 		this.turnTotal=0;
 	}
@@ -28,6 +28,9 @@ Players.prototype.totalScoreDeterminant=function(){
 //User Interface
 
 $(document).ready(function(){
+	var player1;
+	var player2;
+	
 	$("form#nameInput").submit(function(event){
 		event.preventDefault();
 		console.log("hi")	
@@ -35,6 +38,7 @@ $(document).ready(function(){
 		var nameOfPlayer2= $("#player2").val();
 		console.log(nameOfPlayer1);
 
+		// debugger
 		player1= new Players(nameOfPlayer1,0,0);
 		player2= new Players(nameOfPlayer2,0,0);
 		console.log("ok");
@@ -55,18 +59,20 @@ $(document).ready(function(){
 		event.preventDefault();
 		console.log("ok");
 
-		debugger;
 	
 	    $("#totalScore1-value").text("ok");
 	    $("#rollScore1-value").text("ok");
 
+	    // debugger
 		var turnOutput1= player1.randomNumi();
-		console.log(turnOutput1);
+		// console.log (turnOutput1);
+		$("#rollScore1-value").text(turnOutput1);
+
 		if (turnOutput1===1){
-			$("#rollScore1-value").text(turnOutput1);
-			$("#totalScore1-value").text(player1.turnScore);
+			
+		    $("#totalScore1-value").text(player1.turnScore);
 		}else{
-			$("#totalScore1-value").text(player1.totalScore);
+			$("#totalScore1-value").text(player1.totalScore);	
 		}
 
 
