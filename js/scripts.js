@@ -66,14 +66,41 @@ $(document).ready(function(){
 	    // debugger
 		var turnOutput1= player1.randomNumi();
 		// console.log (turnOutput1);
-		$("#rollScore1-value").text(turnOutput1);
-
-		if (turnOutput1===1){
+		$("#rollScore1-value").text(player1.turnTotal);
+		$("#totalScore1-value").text(player1.totalScore);
+		
+		// if (player1.turnOutput1===1){
 			
-		    $("#totalScore1-value").text(player1.turnScore);
-		}else{
-			$("#totalScore1-value").text(player1.totalScore);	
-		}
+		//     $("#totalScore1-value").text(player1.totalScore);
+		// }else{
+		// 	$("#totalScore1-value").text(player1.totalScore);	
+		// }
+
+
+	});
+
+// This section is for the second player
+
+	$("#play-green-2").click(function(event){
+		event.preventDefault();
+		console.log("ok");
+
+	
+	    $("#totalScore2-value").text("ok");
+	    $("#rollScore2-value").text("ok");
+
+	    // debugger
+		var turnOutput2= player2.randomNumi();
+		// console.log (turnOutput1);
+		$("#rollScore2-value").text(player2.turnTotal);
+		$("#totalScore2-value").text(player2.totalScore);
+		
+		// if (player1.turnOutput1===1){
+			
+		//     $("#totalScore1-value").text(player1.totalScore);
+		// }else{
+		// 	$("#totalScore1-value").text(player1.totalScore);	
+		// }
 
 
 	});
