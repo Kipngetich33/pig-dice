@@ -75,6 +75,7 @@ player1= new Players();
 player2= new Players();
 
 $(document).ready(function(){
+<<<<<<< HEAD
 	var player1;
 	var player2;
 	var subTotal;
@@ -84,6 +85,8 @@ $(document).ready(function(){
 		var nameOfPlayer1= $("#player1").val();
 		var nameOfPlayer2= $("#player2").val();
 		console.log(nameOfPlayer1);
+=======
+>>>>>>> master
 =======
 >>>>>>> master
 
