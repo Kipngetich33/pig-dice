@@ -69,6 +69,7 @@ player2= new Players();
 
 $(document).ready(function(){
 
+// this function still needs to be worked on it does not append names
     $("#nameInput#btn-start").submit(function(event){
     	event.preventDefault();
 
