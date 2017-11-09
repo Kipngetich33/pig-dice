@@ -1,111 +1,86 @@
-//Business Logic Section
+var player1;
+var player2;
 
-//Create a constructor players
-function Players(playerName,turnTotal,totalScoreValue){
-	this.playerName= playerName;
-	this.turnTotal=turnTotal;
-	this.totalScoreValue=totalScoreValue;
+
+
+function Players(roll,turn,score){
+	this.roll=roll;
+	this.turn= turn;
+	this.score= score;
 }
 
+var turns=[];
+var roll=0;
+var turn=0;
+var total= 0;
+var score1= 0;
 
-Players.prototype.randomNumi = function(){
-	var randnum=Math.floor(Math.random()*6)+1;
-	if (randnum===1){
-		this.turnTotal=0;
+var turnsSecond=[];
+var rollSecond=0;
+var turnSecond=0;
+var totalSecond= 0;
+var score1Second= 0;
+
+// this are functions for player1
+Players.prototype.rollFunction= function(){
+	roll1 = Math.floor(Math.random()*6) +1;
+	this.roll=roll1;
+	if (this.roll===1){
+		turns.push(0);
+		total+=this.roll;
 	}
 	else{
-		this.turnTotal=this.turnTotal+randnum;
-	};
-	return this.turnTotal;
+	turns.push(this.roll);
+	total+=this.roll;
+	return this.roll;
+	}
 }
+Players.prototype.scoreFunction= function(){
+	var total3=0;
+	for(var turn in turns) { total3 += turns[turn]; }
+	this.score= total3;
+	return this.score;
+	}
 
-// this section function will help in calculating the score
-Players.prototype.totalScoreDeterminant=function(){
-	this.totalScore=this.turnTotal + this.totalScore;
-	this.turnScore=0;
-}
 
-//User Interface
+player1= new Players();
+player2= new Players();
 
 $(document).ready(function(){
-	var player1;
-	var player2;
-	
-	$("form#nameInput").submit(function(event){
+	$("#play-green-1").click(function(event){
 		event.preventDefault();
-		console.log("hi")	
-		var nameOfPlayer1= $("#player1").val();
-		var nameOfPlayer2= $("#player2").val();
-		console.log(nameOfPlayer1);
 
-		// debugger
-		player1= new Players(nameOfPlayer1,0,0);
-		player2= new Players(nameOfPlayer2,0,0);
-		console.log("ok");
+		rollvalue=player1.rollFunction();
+		console.log(player1.roll)
 
-		$("#player1-append").text(nameOfPlayer1);
-		$("#player2-append").text(nameOfPlayer2);
-		console.log("ok");
+		$("#rollScore1-value").text(rollvalue);
+	});
 
-		$("#rules").slideToggle();
-		$("#player1").slideToggle();
-		$("#player2").slideToggle();
-		$("#top").slideToggle();
+	$("#play-red-1").click(function(event){
+		event.preventDefault();
+		var totalScore=player1.scoreFunction();
+		console.log(totalScore);
 
+		$("#totalScore1-value").text(player1.score);
 
 	});
 
-		$("#play-green-1").click(function(event){
+// these are buttons for player2
+   $("#play-green-2").click(function(event){
 		event.preventDefault();
-		console.log("ok");
 
-	
-	    $("#totalScore1-value").text("ok");
-	    $("#rollScore1-value").text("ok");
+		rollvalue2=player2.rollFunction();
+		console.log(player2.roll);
 
-	    // debugger
-		var turnOutput1= player1.randomNumi();
-		// console.log (turnOutput1);
-		$("#rollScore1-value").text(player1.turnTotal);
-		$("#totalScore1-value").text(player1.totalScore);
-		
-		// if (player1.turnOutput1===1){
-			
-		//     $("#totalScore1-value").text(player1.totalScore);
-		// }else{
-		// 	$("#totalScore1-value").text(player1.totalScore);	
-		// }
-
-
+		$("#rollScore2-value").text(rollvalue2);
 	});
 
-// This section is for the second player
-
-	$("#play-green-2").click(function(event){
+	$("#play-red-2").click(function(event){
 		event.preventDefault();
-		console.log("ok");
+		var totalScore=player1.scoreFunction();
+		console.log(totalScore);
 
-	
-	    $("#totalScore2-value").text("ok");
-	    $("#rollScore2-value").text("ok");
-
-	    // debugger
-		var turnOutput2= player2.randomNumi();
-		// console.log (turnOutput1);
-		$("#rollScore2-value").text(player2.turnTotal);
-		$("#totalScore2-value").text(player2.totalScore);
-		
-		// if (player1.turnOutput1===1){
-			
-		//     $("#totalScore1-value").text(player1.totalScore);
-		// }else{
-		// 	$("#totalScore1-value").text(player1.totalScore);	
-		// }
-
+		$("#totalScore2-value").text(player2.score);
 
 	});
-		
-
 });
-
-
