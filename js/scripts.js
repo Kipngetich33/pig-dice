@@ -42,13 +42,6 @@ Players.prototype.scoreFunction= function(){
 	return this.score;
 	}
 
-<<<<<<< HEAD
-// this section function will help in calculating the score
-Players.prototype.totalScoreDeterminant=function(){
-	this.totalScore+=this.turnTotal;
-	return this.totalScore;
-
-=======
 // this are functions for player 2
 Players.prototype.rollFunction2= function(){
 	roll2 = Math.floor(Math.random()*6) +1;
@@ -75,20 +68,6 @@ player1= new Players();
 player2= new Players();
 
 $(document).ready(function(){
-<<<<<<< HEAD
-	var player1;
-	var player2;
-	var subTotal;
-	$("form#nameInput").submit(function(event){
-		event.preventDefault();
-		console.log("hi")	
-		var nameOfPlayer1= $("#player1").val();
-		var nameOfPlayer2= $("#player2").val();
-		console.log(nameOfPlayer1);
-=======
->>>>>>> master
-=======
->>>>>>> master
 
 // this function still needs to be worked on it does not append names
     $("#nameInput#btn-start").submit(function(event){
@@ -111,29 +90,8 @@ $(document).ready(function(){
 
 	$("#play-red-1").click(function(event){
 		event.preventDefault();
-<<<<<<< HEAD
-		console.log("ok");
-
-	
-	    $("#totalScore1-value").text("ok");
-	    $("#rollScore1-value").text("ok");
-
-	    // debugger
-		//var turnOutput1= player1.randomNumi();
-		// console.log (turnOutput1);
-		$("#rollScore1-value").text(player1.randomNumi());
-		$("#totalScore1-value").text(player1.totalScoreDeterminant());
-		
-		// if (player1.turnOutput1===1){
-			
-		//     $("#totalScore1-value").text(player1.totalScore);
-		// }else{
-		// 	$("#totalScore1-value").text(player1.totalScore);	
-		// }
-=======
 		var totalScore=player1.scoreFunction();
 		console.log(totalScore);
->>>>>>> master
 
 		if (totalScore>=100){
 			alert ("player 1 has Wins");
@@ -143,46 +101,9 @@ $(document).ready(function(){
 
 	});
 
-<<<<<<< HEAD
-// This section is for the hold button for player1
-	$("#play-red-1").click(function(event){
-		event.preventDefault();
-        debugger;
-		console.log("button-hold-1");
-		var total3= player1.totalScoreDeterminant();
-		$("#totalScore1-value").text(total3);
-
-	});
-
-
-// This section is for the second player
-
-	$("#play-green-2").click(function(event){
-		event.preventDefault();
-		console.log("ok");
-
-	
-	    $("#totalScore2-value").text("ok");
-	    $("#rollScore2-value").text("ok");
-
-	    // debugger
-		var turnOutput2= player2.randomNumi();
-		// console.log (turnOutput1);
-		var total3= totalScoreDeterminant();
-		$("#rollScore2-value").text(player2.turnTotal);
-		$("#totalScore2-value").text(total3);
-		
-		// if (player1.turnOutput1===1){
-			
-		//     $("#totalScore1-value").text(player1.totalScore);
-		// }else{
-		// 	$("#totalScore1-value").text(player1.totalScore);	
-		// }
-=======
 // these are buttons for player2
    $("#play-green-2").click(function(event){
 		event.preventDefault();
->>>>>>> master
 
 		rollvalue2=player2.rollFunction2();
 		console.log(player2.roll);
@@ -204,3 +125,5 @@ $(document).ready(function(){
 
 	});
 });
+
+//adding changes in order to push to gh-pages
