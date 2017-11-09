@@ -63,7 +63,6 @@ Players.prototype.rollFunction2= function(){
 	totalSecond+=this.roll;
 	return this.roll;
 	}
->>>>>>> master
 }
 Players.prototype.scoreFunction2= function(){
 	var total4=0;
@@ -76,7 +75,6 @@ player1= new Players();
 player2= new Players();
 
 $(document).ready(function(){
-<<<<<<< HEAD
 	var player1;
 	var player2;
 	var subTotal;
@@ -89,6 +87,7 @@ $(document).ready(function(){
 =======
 >>>>>>> master
 
+// this function still needs to be worked on it does not append names
     $("#nameInput#btn-start").submit(function(event){
     	event.preventDefault();
 
