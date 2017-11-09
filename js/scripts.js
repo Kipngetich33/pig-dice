@@ -1,7 +1,6 @@
+// Business Logic
 var player1;
 var player2;
-
-
 
 function Players(roll,turn,score){
 	this.roll=roll;
@@ -28,6 +27,7 @@ Players.prototype.rollFunction= function(){
 	if (this.roll===1){
 		turns.push(0);
 		total+=this.roll;
+		alert ("You rolled a 1,turn for player2");
 	}
 	else{
 	turns.push(this.roll);
@@ -42,11 +42,42 @@ Players.prototype.scoreFunction= function(){
 	return this.score;
 	}
 
+// this are functions for player 2
+Players.prototype.rollFunction2= function(){
+	roll2 = Math.floor(Math.random()*6) +1;
+	this.roll=roll2;
+	if (this.roll===1){
+		turnsSecond.push(0);
+		totalSecond+=this.roll;
+		alert ("You rolled a 1,turn for player1");
+	}
+	else{
+	turnsSecond.push(this.roll);
+	totalSecond+=this.roll;
+	return this.roll;
+	}
+}
+Players.prototype.scoreFunction2= function(){
+	var total4=0;
+	for(var turn in turnsSecond) { total4 += turnsSecond[turn]; }
+	this.score= total4;
+	return this.score;
+	}
 
 player1= new Players();
 player2= new Players();
 
 $(document).ready(function(){
+
+    $("#nameInput#btn-start").submit(function(event){
+    	event.preventDefault();
+
+    	var name= $("#player1").val();
+    	console.log(name);
+    });
+	
+
+
 	$("#play-green-1").click(function(event){
 		event.preventDefault();
 
@@ -61,7 +92,11 @@ $(document).ready(function(){
 		var totalScore=player1.scoreFunction();
 		console.log(totalScore);
 
+		if (totalScore>=100){
+			alert ("player 1 has Wins");
+		} else{
 		$("#totalScore1-value").text(player1.score);
+		}
 
 	});
 
@@ -69,7 +104,7 @@ $(document).ready(function(){
    $("#play-green-2").click(function(event){
 		event.preventDefault();
 
-		rollvalue2=player2.rollFunction();
+		rollvalue2=player2.rollFunction2();
 		console.log(player2.roll);
 
 		$("#rollScore2-value").text(rollvalue2);
@@ -77,10 +112,15 @@ $(document).ready(function(){
 
 	$("#play-red-2").click(function(event){
 		event.preventDefault();
-		var totalScore=player1.scoreFunction();
+		var totalScore=player2.scoreFunction2();
 		console.log(totalScore);
 
-		$("#totalScore2-value").text(player2.score);
+		if (totalScore>=100){
+			alert ("player 2 has Wins");
+		}
+		else{
+			$("#totalScore2-value").text(totalScore);
+		}
 
 	});
 });
